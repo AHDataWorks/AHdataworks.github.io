@@ -1768,8 +1768,12 @@ button,
           margin: -2em 0 0 -2em;
           width: 4em; } }
   @media screen and (max-width: 480px) {
-    .features article .icon:before {
-      font-size: 1.25rem; } }
+    .features article .icon:before,
+    .features article .icon:after {
+      content: none; /* Removes the content of the pseudo-elements, effectively hiding them */
+      border: none; /* If borders are used to create the box, this removes them */
+      background: none; /* If a background is used for the box, this removes it */
+  }}
 
 /* Posts */
 .posts {
